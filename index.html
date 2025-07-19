@@ -40,12 +40,12 @@
 				background-color: var(--accent);
 			}
 			.bubble-card {
-  background: #4acaa8; /* green home color */
-  color: white;
-  border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+  				background: #4acaa8; /* green home color */
+  				color: white;
+  				border-radius: 15px;
+  				padding: 1.5rem;
+  				box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			}
 			.carousel-wrapper {
 				position: relative;
 				overflow: hidden;
@@ -91,6 +91,33 @@
 			.center {
 				text-align: center;
 			}
+			.image.right-card {
+				float: right;
+				margin-left: 2rem;
+				width: 160px;
+				height: 160px;
+				border-radius: 50%;
+				object-fit: cover;
+				box-shadow: 0 6px 18px rgba(76,202,168,0.18);
+			}
+			@media screen and (max-width: 600px) {
+				.image.right-card {
+					float: none;
+					display: block;
+					margin: 0 auto 1.5rem auto;
+				}
+			}
+			.right-card-container {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				margin-bottom: 2rem;
+			}
+			.right-card-content {
+				flex: 1;
+				margin-right: 1.5rem;
+				text-align: right;
+			}
 		</style>
 	</head>
 	<body class="is-preload" data-theme="light">
@@ -114,32 +141,36 @@
 				<p>
 					<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a>
 				</p>
-				</a>
-			<button onclick="toggleDarkMode()" class="button" style="background: #4acaa8; color: white;">
-				<i class="fas fa-adjust"></i> Toggle Dark Mode
-			</button>
-			<button onclick="window.print()" class="button" style="background: #4acaa8; color: white;">
-				<i class="fas fa-file-pdf"></i> Download PDF
-			</button>
 			</header>
-</section>
-			<nav id="nav">
-				<ul>
-					<li><a href="#profile" class="active">Profile</a></li>
-					<li><a href="#experience">Experience</a></li>
-					<li><a href="#education">Education</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#courses">Courses</a></li>
-					<li><a href="#recommendations">Recommendations</a></li>
-				</ul>
-			</nav>
-			<footer>
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/vaibhavrajvyas/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="mailto:vaibhavrajvyas17@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
 		</section>
+		<!-- Example Right Side Card Section (Aesthetically spaced) -->
+		<section class="right-card-container">
+			<div class="right-card-content">
+				<h2 style="color:#4acaa8;"><i class="fas fa-user"></i> About</h2>
+				<p>
+					Detail-oriented engineer with a strong background in business intelligence, mainframe systems, and technical analysis.<br>
+					Skilled in optimizing business processes, managing end-to-end system development, and leveraging data-driven strategies to drive operational efficiency.<br>
+					Experienced in mainframe development, compliance analysis, and BI reporting across sectors including E-commerce, logistics, and banking.
+				</p>
+			</div>
+			<span class="image right-card"><img src="profile.jpg" alt="Profile" /></span>
+		</section>
+		<nav id="nav">
+			<ul>
+				<li><a href="#profile" class="active">Profile</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#courses">Courses</a></li>
+				<li><a href="#recommendations">Recommendations</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/vaibhavrajvyas/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="mailto:vaibhavrajvyas17@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</footer>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -159,96 +190,96 @@
 
 				<!-- Experience -->
 				<section id="experience">
-	<div class="container">
-		<header class="major">
-			<h2><i class="fas fa-briefcase"></i> Experience</h2>
-		</header>
-		<h3>System Analyst II – Innoveo Kft, Budapest (Apr 2022–Present)</h3>
-		<ul>
-			<li>Collaborated with Business Analysts and Product Managers to gather and interpret requirements, translating them into actionable system features using SDLC best practices and tools like JIRA and Confluence.</li>
-			<li>Designed, analyzed, and enhanced system functionalities across Finance, Risk Management, Operations, and IT domains, aligning with business goals and resolving cross-functional system issues.</li>
-			<li>Utilized SQL, RDBMS, Azure DevOps, TeamCity, and Git/Sourcetree to support system development, integration testing, and deployment within Innoveo’s low-code environment.</li>
-		</ul>
-		<h3>Operations Analyst – Sun Metal Group, Sharjah (Jun 2021–Apr 2022)</h3>
-		<ul>
-			<li>Applied strong analytical skills to evaluate and revise company policies, driving manufacturing efficiency and reducing paper usage through digitization initiatives.</li>
-			<li>Optimized resource utilization and streamlined documentation workflows across departments through targeted process enhancements.</li>
-			<li>Provided comprehensive HR support, enabling smooth plant operations and accurate compliance tracking for employee documentation.</li>
-		</ul>
-		<h3>Business Analyst – Bellboy, Kwik-E-Shops, Dubai (Nov 2020–Jan 2021)</h3>
-		<ul>
-			<li>Conducted analysis of retail trends during the COVID-19 pandemic, shaping data-driven strategies and executive decision-making.</li>
-			<li>Performed qualitative and quantitative research using Excel to assess customer behavior and retention, translating findings into actionable recommendations.</li>
-			<li>Presented concise, data-backed analytical insights to Board members and stakeholders, enabling strategic planning during market volatility.</li>
-		</ul>
-		<h3>Compliance Assistance – Bank Of Baroda, Dubai (Sep 2019–Mar 2020)</h3>
-		<ul>
-			<li>Researched and analyzed NRE accounts, ensuring compliance with global sanctions using mainframe data queries and validations.</li>
-			<li>Mapped complex organizational hierarchies and account structures within legacy systems to flag compliance risks and align with regulatory standards.</li>
-			<li>Monitored transactions and reports to detect regulatory violations, supporting audit readiness and enhancing compliance filtering rules.</li>
-		</ul>
-		<h3>Technical Sales Engineer – Max Technical Electrical Trading, Dubai (Jul 2018–Feb 2019)</h3>
-		<ul>
-			<li>Streamlined inventory management for 5,000+ automation products using data warehousing techniques, improving operational visibility and customer response times.</li>
-			<li>Developed advanced Excel tools to efficiently manage and respond to customer inquiries, enhancing service delivery and client satisfaction.</li>
-			<li>Analyzed customer requirements and provided tailored upgrade recommendations supporting both technical feasibility and margin objectives.</li>
-		</ul>
-	</div>
-</section>
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-briefcase"></i> Experience</h2>
+						</header>
+						<h3>System Analyst II – Innoveo Kft, Budapest (Apr 2022–Present)</h3>
+						<ul>
+							<li>Collaborated with Business Analysts and Product Managers to gather and interpret requirements, translating them into actionable system features using SDLC best practices and tools like JIRA and Confluence.</li>
+							<li>Designed, analyzed, and enhanced system functionalities across Finance, Risk Management, Operations, and IT domains, aligning with business goals and resolving cross-functional system issues.</li>
+							<li>Utilized SQL, RDBMS, Azure DevOps, TeamCity, and Git/Sourcetree to support system development, integration testing, and deployment within Innoveo’s low-code environment.</li>
+						</ul>
+						<h3>Operations Analyst – Sun Metal Group, Sharjah (Jun 2021–Apr 2022)</h3>
+						<ul>
+							<li>Applied strong analytical skills to evaluate and revise company policies, driving manufacturing efficiency and reducing paper usage through digitization initiatives.</li>
+							<li>Optimized resource utilization and streamlined documentation workflows across departments through targeted process enhancements.</li>
+							<li>Provided comprehensive HR support, enabling smooth plant operations and accurate compliance tracking for employee documentation.</li>
+						</ul>
+						<h3>Business Analyst – Bellboy, Kwik-E-Shops, Dubai (Nov 2020–Jan 2021)</h3>
+						<ul>
+							<li>Conducted analysis of retail trends during the COVID-19 pandemic, shaping data-driven strategies and executive decision-making.</li>
+							<li>Performed qualitative and quantitative research using Excel to assess customer behavior and retention, translating findings into actionable recommendations.</li>
+							<li>Presented concise, data-backed analytical insights to Board members and stakeholders, enabling strategic planning during market volatility.</li>
+						</ul>
+						<h3>Compliance Assistance – Bank Of Baroda, Dubai (Sep 2019–Mar 2020)</h3>
+						<ul>
+							<li>Researched and analyzed NRE accounts, ensuring compliance with global sanctions using mainframe data queries and validations.</li>
+							<li>Mapped complex organizational hierarchies and account structures within legacy systems to flag compliance risks and align with regulatory standards.</li>
+							<li>Monitored transactions and reports to detect regulatory violations, supporting audit readiness and enhancing compliance filtering rules.</li>
+						</ul>
+						<h3>Technical Sales Engineer – Max Technical Electrical Trading, Dubai (Jul 2018–Feb 2019)</h3>
+						<ul>
+							<li>Streamlined inventory management for 5,000+ automation products using data warehousing techniques, improving operational visibility and customer response times.</li>
+							<li>Developed advanced Excel tools to efficiently manage and respond to customer inquiries, enhancing service delivery and client satisfaction.</li>
+							<li>Analyzed customer requirements and provided tailored upgrade recommendations supporting both technical feasibility and margin objectives.</li>
+						</ul>
+					</div>
+				</section>
 
 				<!-- Education -->
-<section id="education">
-	<div class="container">
-		<header class="major">
-			<h2><i class="fas fa-graduation-cap"></i> Education</h2>
-		</header>
-		<h3>Bachelor of Technology in Mechatronics Engineering – Manipal University Dubai</h3>
-		<p><strong>Sep 2014 — Mar 2018</strong></p>
-		<ul>
-			<li>Specialization: Robotics and various IT automation systems</li>
-		</ul>
-		<h3>Master of Business Administration – Manipal University Dubai</h3>
-		<p><strong>Jan 2019 — Jan 2021</strong></p>
-		<ul>
-			<li>Specialization: Operations and Finance</li>
-		</ul>
-	</div>
-</section>
+				<section id="education">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-graduation-cap"></i> Education</h2>
+						</header>
+						<h3>Bachelor of Technology in Mechatronics Engineering – Manipal University Dubai</h3>
+						<p><strong>Sep 2014 — Mar 2018</strong></p>
+						<ul>
+							<li>Specialization: Robotics and various IT automation systems</li>
+						</ul>
+						<h3>Master of Business Administration – Manipal University Dubai</h3>
+						<p><strong>Jan 2019 — Jan 2021</strong></p>
+						<ul>
+							<li>Specialization: Operations and Finance</li>
+						</ul>
+					</div>
+				</section>
 
 				<!-- Skills -->
-<section id="skills">
-	<div class="container">
-		<header class="major">
-			<h2><i class="fas fa-cogs"></i> Skills</h2>
-		</header>
-		<ul>
-			<li>Programming &amp; Scripting</li>
-			<li>Mainframe &amp; Legacy Systems</li>
-			<li>Data &amp; Database Management</li>
-			<li>Version Control &amp; CI/CD</li>
-			<li>Testing &amp; Debugging Tools</li>
-			<li>System Integration &amp; APIs</li>
-			<li>Automation &amp; Tooling</li>
-			<li>Deployment &amp; Access Tools</li>
-			<li>Documentation &amp; Collaboration</li>
-		</ul>
-	</div>
-</section>
+				<section id="skills">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-cogs"></i> Skills</h2>
+						</header>
+						<ul>
+							<li>Programming &amp; Scripting</li>
+							<li>Mainframe &amp; Legacy Systems</li>
+							<li>Data &amp; Database Management</li>
+							<li>Version Control &amp; CI/CD</li>
+							<li>Testing &amp; Debugging Tools</li>
+							<li>System Integration &amp; APIs</li>
+							<li>Automation &amp; Tooling</li>
+							<li>Deployment &amp; Access Tools</li>
+							<li>Documentation &amp; Collaboration</li>
+						</ul>
+					</div>
+				</section>
 
 				<!-- Courses -->
-<section id="courses">
-	<div class="container">
-		<header class="major">
-			<h2><i class="fas fa-book"></i> Courses</h2>
-		</header>
-		<ul>
-			<li><strong>Apr 2019</strong> – Marketing Strategy for Entrepreneurs, EIT Digital</li>
-			<li><strong>Nov 2020</strong> – Firm Level Economics: Consumer &amp; Producer Behavior, University of Illinois</li>
-			<li><strong>Jun 2021</strong> – Neural Networks and Deep Learning, Deeplearning.ai</li>
-			<li><strong>Feb 2023</strong> – Data Science, IBM</li>
-		</ul>
-	</div>
-</section>
+				<section id="courses">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-book"></i> Courses</h2>
+						</header>
+						<ul>
+							<li><strong>Apr 2019</strong> – Marketing Strategy for Entrepreneurs, EIT Digital</li>
+							<li><strong>Nov 2020</strong> – Firm Level Economics: Consumer &amp; Producer Behavior, University of Illinois</li>
+							<li><strong>Jun 2021</strong> – Neural Networks and Deep Learning, Deeplearning.ai</li>
+							<li><strong>Feb 2023</strong> – Data Science, IBM</li>
+						</ul>
+					</div>
+				</section>
 
 				<!-- Recommendations (Carousel) -->
 				<section id="recommendations">
