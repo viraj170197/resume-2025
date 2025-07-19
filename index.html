@@ -29,15 +29,65 @@
 
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 2rem auto;
-      max-width: 900px;
-      transition: background-color 0.4s, color 0.4s;
+      margin: 0;
+      padding-top: 70px;
+      max-width: 960px;
+      margin: auto;
       line-height: 1.6;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--bg-light);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    [data-theme="dark"] header {
+      background-color: #121212;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .controls button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .controls button:hover {
+      background-color: #2c80b4;
     }
 
     h1, h2, h3 {
       color: var(--primary);
-      margin-bottom: 0.5rem;
+    }
+
+    section {
+      margin: 2rem 0;
+      padding: 0 1rem;
       animation: fadeIn 1s ease;
     }
 
@@ -47,42 +97,17 @@
 
     a {
       color: var(--primary);
-      text-decoration: none;
     }
 
-    .section {
-      margin-bottom: 2.5rem;
-      animation: fadeIn 1.2s ease;
+    img.profile {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    .contact {
-      margin-bottom: 2rem;
-    }
-
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-    }
-
-    button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #2c80b4;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 2rem 0;
+    .center {
+      text-align: center;
     }
 
     @keyframes fadeIn {
@@ -93,93 +118,100 @@
 </head>
 <body>
 
-  <div class="controls">
-    <button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Dark Mode</button>
-    <button onclick="window.print()"><i class="fas fa-file-download"></i> Download PDF</button>
-  </div>
+  <header>
+    <div>
+      <strong>Vabhave Raj Vyas</strong>
+    </div>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#courses">Courses</a>
+      <a href="javascript:void(0);" onclick="window.print()">Download PDF</a>
+      <button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i></button>
+    </nav>
+  </header>
 
-  <h1>Vabhave Raj Vyas</h1>
-  <div class="contact">
-    <p><i class="fas fa-map-marker-alt"></i> Visegradi Utca, 13th District, Budapest, Hungary</p>
-    <p><i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a></p>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a></p>
-  </div>
+  <section class="center">
+    <img src="profile.jpg" alt="Profile photo" class="profile">
+    <h1>Vabhave Raj Vyas</h1>
+    <p>
+      <i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
+      <i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a> &nbsp;|&nbsp;
+      <i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a>
+    </p>
+  </section>
 
-  <div class="section">
+  <section id="profile">
     <h2><i class="fas fa-user"></i> Profile</h2>
     <p>
-      Detail-oriented engineer with a strong background in business intelligence, mainframe systems, and technical analysis. Skilled in optimizing business processes, managing end-to-end system development, and leveraging data-driven strategies. Experienced across E-commerce, logistics, and banking sectors. Proficient in SQL, COBOL, Tableau, Git, Azure DevOps, and more. Holds an MBA in Operations & Finance and a BTech in Mechatronics Engineering.
+      Detail-oriented engineer with expertise in business intelligence, mainframe systems, and technical analysis. Experienced in streamlining business processes and supporting strategic growth using data-driven solutions. Skilled in SQL, COBOL, Tableau, Git, Azure DevOps, SOAP UI, and Excel. Strong cross-functional collaborator with degrees in Mechatronics Engineering and an MBA in Operations & Finance.
     </p>
-  </div>
+  </section>
 
-  <div class="section">
+  <section id="experience">
     <h2><i class="fas fa-briefcase"></i> Employment History</h2>
 
     <h3>System Analyst II – Innoveo Kft, Budapest (Apr 2022 – Present)</h3>
     <ul>
-      <li>Gathered and translated business requirements using JIRA and Confluence</li>
-      <li>Enhanced system functionalities across Finance, Risk, Ops, and IT domains</li>
-      <li>Used SQL, Azure DevOps, Git, and TeamCity for development and testing</li>
-      <li>Performed SOAP UI API testing; ensured performance, scalability, and compliance</li>
+      <li>Transformed business requirements into system features using Confluence & JIRA</li>
+      <li>Enhanced Finance/Risk/Operations modules within low-code environments</li>
+      <li>Conducted API testing via SOAP UI and supported agile delivery pipelines</li>
     </ul>
 
     <h3>Operations Analyst – Sun Metal Group, Sharjah (Jun 2021 – Apr 2022)</h3>
     <ul>
-      <li>Improved manufacturing efficiency and digitized paper workflows</li>
-      <li>Managed documentation and supported HR operations</li>
+      <li>Digitized manufacturing workflows; supported HR & documentation systems</li>
+      <li>Improved operational efficiency across Finance and IT teams</li>
     </ul>
 
-    <h3>Business Analyst – Bellboy / Kwik-E-Shops, Dubai (Nov 2020 – Jan 2021)</h3>
+    <h3>Business Analyst – Bellboy/Kwik-E-Shops, Dubai (Nov 2020 – Jan 2021)</h3>
     <ul>
-      <li>Analyzed COVID-19-driven retail trends and customer behavior</li>
-      <li>Used Excel and Tableau for insights and stakeholder reporting</li>
-      <li>Led 90-day E-commerce launch with successful delivery</li>
+      <li>Analyzed consumer trends during COVID; presented insights to stakeholders</li>
+      <li>Launched a full E-commerce platform in 90 days</li>
     </ul>
 
     <h3>Compliance Assistant – Bank of Baroda, Dubai (Sep 2019 – Mar 2020)</h3>
     <ul>
-      <li>Audited compliance using legacy mainframe systems and structured queries</li>
-      <li>Enhanced compliance rule sets and contributed to internal policy tracking</li>
+      <li>Audited NRE accounts via legacy mainframe tools for compliance enforcement</li>
+      <li>Helped design automation for recurring risk scenarios</li>
     </ul>
 
     <h3>Technical Sales Engineer – Max Technical, Dubai (Jul 2018 – Feb 2019)</h3>
     <ul>
-      <li>Managed inventory systems for 5,000+ automation products</li>
-      <li>Delivered solutions and fulfilled orders across 15 global suppliers</li>
+      <li>Streamlined inventory tracking for 5,000+ items with data tools</li>
+      <li>Managed deliveries across 15 global partners</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="section">
+  <section id="education">
     <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-    <h3>MBA in Operations & Finance – Manipal University, Dubai (2019 – 2021)</h3>
-    <h3>BTech in Mechatronics Engineering – Manipal University, Dubai (2014 – 2018)</h3>
-    <p>Specialized in Robotics and Automation Systems</p>
-  </div>
+    <h3>MBA, Operations & Finance – Manipal University, Dubai (2019–2021)</h3>
+    <h3>BTech, Mechatronics Engineering – Manipal University, Dubai (2014–2018)</h3>
+    <p>Focus: Robotics & Automation Systems</p>
+  </section>
 
-  <div class="section">
-    <h2><i class="fas fa-code"></i> Skills</h2>
+  <section id="skills">
+    <h2><i class="fas fa-tools"></i> Skills</h2>
     <ul>
-      <li>Programming & Scripting</li>
-      <li>Mainframe & Legacy Systems</li>
-      <li>Data & Database Management</li>
-      <li>Version Control & CI/CD</li>
-      <li>Testing & Debugging Tools</li>
-      <li>System Integration & APIs</li>
-      <li>Automation & Tooling</li>
-      <li>Deployment & Access Tools</li>
-      <li>Documentation & Collaboration</li>
+      <li>SQL, COBOL, Excel, Tableau</li>
+      <li>Azure DevOps, Git, TeamCity</li>
+      <li>Mainframe systems & RDBMS</li>
+      <li>API Testing (SOAP UI), Automation</li>
+      <li>CI/CD, Documentation, Collaboration</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2><i class="fas fa-book"></i> Courses</h2>
+  <section id="courses">
+    <h2><i class="fas fa-book-open"></i> Courses</h2>
     <ul>
-      <li>Marketing Strategy for Entrepreneurs – EIT Digital (Apr 2019)</li>
-      <li>Firm Level Economics – University of Illinois (Nov 2020)</li>
-      <li>Neural Networks and Deep Learning – Deeplearning.ai (Jun 2021)</li>
-      <li>Data Science – IBM (Feb 2023)</li>
+      <li>Marketing Strategy – EIT Digital (2019)</li>
+      <li>Firm-Level Economics – Univ. of Illinois (2020)</li>
+      <li>Neural Networks – DeepLearning.AI (2021)</li>
+      <li>Data Science – IBM (2023)</li>
     </ul>
-  </div>
+  </section>
 
   <script>
     function toggleDarkMode() {
