@@ -21,23 +21,32 @@
 				background-color: #1e1e1e;
 				color: #f4f4f4;
 			}
-			.topbar {
+			.topbar-actions {
 				display: flex;
-				justify-content: flex-end;
-				gap: 1rem;
-				margin-bottom: 2rem;
+				justify-content: center;
+				align-items: center;
+				gap: 2.5rem;
+				background: #4acaa8;
+				padding: 1.2rem 0 1.2rem 0;
+				margin-bottom: 0;
 			}
-			.topbar button {
-				background-color: var(--primary);
+			.topbar-actions .button,
+			.topbar-actions button {
+				background: transparent;
 				color: white;
-				border: none;
-				padding: 0.5rem 1rem;
 				font-weight: bold;
-				border-radius: 5px;
+				font-size: 1.25rem;
+				border: none;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
 				cursor: pointer;
+				padding: 0;
 			}
-			.topbar button:hover {
-				background-color: var(--accent);
+			.topbar-actions .button i,
+			.topbar-actions button i {
+				font-size: 1.3em;
+				margin-right: 0.5em;
 			}
 			.bubble-card {
   				background: #4acaa8; /* green home color */
@@ -122,58 +131,45 @@
 	</head>
 	<body class="is-preload" data-theme="light">
 
-		<!-- Topbar -->
-		<div class="topbar">
-			<button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Dark Mode</button>
-			<button onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
-		</div>
-
 		<!-- Header -->
-<section id="header">
-	<header class="center">
-		<span class="image avatar"><img src="images/avatar.jpg" alt="Willis Corto" /></span>
-		<h1 id="logo"><a href="#">Willis Corto</a></h1>
-		<p>I got reprogrammed by a rogue AI<br />
-		and now I'm totally cray</p>
-		<!-- BUTTONS GROUP AT THE BOTTOM OF THE HEADER -->
-		<div class="topbar center" style="
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 2.5rem;
-			background: #4acaa8;
-			padding: 1.2rem 0 1.2rem 0;
-			margin-bottom: 0;
-		">
-			<a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank" class="button" style="background: transparent; color: white; text-decoration: none; font-weight: bold; font-size: 1.25rem; display: flex; align-items: center; border: none;">
-				<i class="fab fa-linkedin" style="font-size:1.3em; margin-right:0.5em;"></i> LinkedIn Profile
-			</a>
-			<button onclick="toggleDarkMode()" class="button" style="background: transparent; color: white; font-weight: bold; font-size: 1.25rem; border: none; display: flex; align-items: center;">
-				<i class="fas fa-adjust" style="font-size:1.3em; margin-right:0.5em;"></i> Toggle Dark Mode
-			</button>
-			<button onclick="window.print()" class="button" style="background: transparent; color: white; font-weight: bold; font-size: 1.25rem; border: none; display: flex; align-items: center;">
-				<i class="fas fa-file-pdf" style="font-size:1.3em; margin-right:0.5em;"></i> Download PDF
-			</button>
-		</div>
-	</header>
-	<nav id="nav">
-		<ul>
-			<li><a href="#one" class="active">About</a></li>
-			<li><a href="#two">Things I Can Do</a></li>
-			<li><a href="#three">A Few Accomplishments</a></li>
-			<li><a href="#four">Contact</a></li>
-		</ul>
-	</nav>
-	<footer>
-		<ul class="icons">
-			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-			<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-		</ul>
-	</footer>
-</section>
+		<section id="header">
+			<header class="center">
+				<span class="image avatar"><img src="images/avatar.jpg" alt="Willis Corto" /></span>
+				<h1 id="logo"><a href="#">Willis Corto</a></h1>
+				<p>I got reprogrammed by a rogue AI<br />
+				and now I'm totally cray</p>
+			</header>
+			<!-- Action Buttons Group (correct HTML, bottom of header) -->
+			<div class="topbar-actions">
+				<a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank" class="button">
+					<i class="fab fa-linkedin"></i> LinkedIn Profile
+				</a>
+				<button onclick="toggleDarkMode()" type="button">
+					<i class="fas fa-adjust"></i> Toggle Dark Mode
+				</button>
+				<button onclick="window.print()" type="button">
+					<i class="fas fa-file-pdf"></i> Download PDF
+				</button>
+			</div>
+			<nav id="nav">
+				<ul>
+					<li><a href="#one" class="active">About</a></li>
+					<li><a href="#two">Things I Can Do</a></li>
+					<li><a href="#three">A Few Accomplishments</a></li>
+					<li><a href="#four">Contact</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+		</section>
+
 		<!-- Example Right Side Card Section (Aesthetically spaced) -->
 		<section class="right-card-container">
 			<div class="right-card-content">
@@ -186,22 +182,6 @@
 			</div>
 			<span class="image right-card"><img src="profile.jpg" alt="Profile" /></span>
 		</section>
-		<nav id="nav">
-			<ul>
-				<li><a href="#profile" class="active">Profile</a></li>
-				<li><a href="#experience">Experience</a></li>
-				<li><a href="#education">Education</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#courses">Courses</a></li>
-				<li><a href="#recommendations">Recommendations</a></li>
-			</ul>
-		</nav>
-		<footer>
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/vaibhavrajvyas/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				<li><a href="mailto:vaibhavrajvyas17@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-		</footer>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
