@@ -188,6 +188,101 @@
   [data-theme="dark"] .bubble-card strong {
     color: #e0f0ff;
   }
+    .carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.bubble-card {
+  background: linear-gradient(135deg, #e0f0ff, #c2e1f7);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  font-style: italic;
+  color: #2c3e50;
+}
+
+.bubble-card strong {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  color: #0b355a;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: #2980b9;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.carousel-dots button {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dots .active {
+  background-color: #3498db;
+}
+
+@media (hover: hover) {
+  .bubble-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s;
+  }
+}
+
+[data-theme="dark"] .bubble-card {
+  background: linear-gradient(135deg, #1e3a5a, #162f4c);
+  color: #e0f0ff;
+}
+[data-theme="dark"] .bubble-card strong {
+  color: #e0f0ff;
+}
 </style>
 </head>
 
@@ -279,92 +374,34 @@
       html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
     }
   </script>
- <section>
+<section>
   <h2><i class="fas fa-comment-dots"></i> Recommendations</h2>
-  <div class="carousel-wrapper">
-    <div class="carousel-track" id="carouselTrack">
 
-      <!-- Slide 1 -->
+  <div class="carousel-wrapper" id="carouselWrapper">
+    <!-- Carousel Track -->
+    <div class="carousel-track" id="carouselTrack">
+      <!-- Slide: repeat as needed -->
       <div class="carousel-slide">
         <div class="bubble-card">
-          <p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... I highly recommend Vaibhave and look forward to seeing his continued success!"</p>
+          <p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... Highly recommend!"</p>
           <strong>Shabapathy S B</strong><br>PM @ Innoveo | Ex Deloitte, IBM, Atos
         </div>
       </div>
-
-      <!-- Slide 2 -->
       <div class="carousel-slide">
         <div class="bubble-card">
-          <p>"It's rare to come across someone as motivated and enthusiastic as Vaibhav... making him an invaluable asset."</p>
+          <p>"Vaibhav’s enthusiasm and fresh ideas made him an invaluable asset..."</p>
           <strong>Mohit Kumar Garg</strong><br>Senior Business Analyst @ LTIMindtree
         </div>
       </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"Raj’s dedication and commitment to excellence were truly commendable... I highly recommend Raj."</p>
-          <strong>Lívia Barta, PMP</strong><br>Project Lead @ Innoveo
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"Exceptional problem-solving skills and attention to detail... a true professional!"</p>
-          <strong>Attila Andrássy</strong><br>Business Analyst @ Dorsum
-        </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"Hard-working, reliable, and always ready to learn... delivered value in our IT/Insurtech project."</p>
-          <strong>Richárd Pap</strong><br>Senior BA @ Hamilton Insurance
-        </div>
-      </div>
-
-      <!-- Slide 6 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"Attention to detail and 100% commitment—Vaibhav was instrumental in keeping us on schedule."</p>
-          <strong>Raavi Jain - CAMS</strong><br>Compliance Consultant @ Vertex Compliance
-        </div>
-      </div>
-
-      <!-- Slide 7 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"Sincere and dedicated team player, with strong compliance knowledge in KYC and due diligence."</p>
-          <strong>Vasantha Mohan</strong><br>Founder, Vertex Compliance
-        </div>
-      </div>
-
-      <!-- Slide 8 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"Confident, motivated, and technically sharp—Vaibhav blends communication with solid business skills."</p>
-          <strong>SK Pandey, Ph.D.</strong><br>Dean-STEM @ MAHE Dubai
-        </div>
-      </div>
-
-      <!-- Slide 9 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"One of the most proactive and knowledge-hungry students I taught. I expect great things from him."</p>
-          <strong>Anil Sequeira</strong><br>Professor @ IPPT Polish Academy of Science
-        </div>
-      </div>
-
-      <!-- Slide 10 -->
-      <div class="carousel-slide">
-        <div class="bubble-card">
-          <p>"‘Ridiculously efficient’—Vaibhav could command a room and align a team like no one else."</p>
-          <strong>Hussain Murtuza</strong><br>L&D Specialist @ CAFU Petroleum
-        </div>
-      </div>
-
+      <!-- Add other slides as above -->
     </div>
+
+    <!-- Navigation Arrows -->
+    <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+    <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
   <script>
@@ -379,6 +416,65 @@
   }
 
   setInterval(moveToNextSlide, 5000); // Change every 5 seconds
+</script>
+  <script>
+  const track = document.getElementById('carouselTrack');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dotsContainer = document.getElementById('carouselDots');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentSlide = 0;
+  let autoSlideInterval;
+  const totalSlides = slides.length;
+
+  function goToSlide(index) {
+    currentSlide = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateDots();
+  }
+
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('button');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+  nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+  function autoSlide() {
+    autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+  }
+
+  autoSlide();
+  updateDots();
+
+  // Swipe Support
+  let startX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    clearInterval(autoSlideInterval);
+  });
+
+  track.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goToSlide(currentSlide + 1); // Swipe left
+      else goToSlide(currentSlide - 1); // Swipe right
+    }
+    autoSlide(); // Restart auto sliding
+  });
 </script>
 </body>
 </html>
