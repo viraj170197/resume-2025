@@ -1,4 +1,3 @@
-## Vabhave Raj Vyas
 
 📍 Visegradi Utca, 13th District, Budapest, Hungary  
 📞 +36 70 674 6139  
