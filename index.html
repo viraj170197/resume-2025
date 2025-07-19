@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vabhave Raj Vyas - Resume</title>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     :root {
       --bg-light: #f5f8fa;
@@ -14,28 +15,34 @@
       --primary: #3498db;
       --accent: #2980b9;
     }
+
     [data-theme="light"] {
       background: linear-gradient(to right, #f5f8fa, #e4ecf0);
       color: var(--text-light);
     }
+
     [data-theme="dark"] {
       background: linear-gradient(to right, #121212, #1c1c1c);
       color: var(--text-dark);
     }
+
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       max-width: 960px;
       margin: auto;
+      padding: 2rem;
       transition: background 0.5s, color 0.5s;
     }
+
     .topbar {
       display: flex;
       justify-content: flex-end;
       gap: 1rem;
       margin-bottom: 1rem;
     }
+
     .topbar button {
       background-color: var(--primary);
       color: white;
@@ -45,35 +52,44 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .topbar button:hover {
       background-color: var(--accent);
     }
+
     h1, h2, h3 {
       color: var(--primary);
     }
+
     .center {
       text-align: center;
     }
+
     img.profile {
       width: 150px;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       margin-bottom: 1rem;
     }
+
     section {
       margin-bottom: 2.5rem;
       animation: fadeIn 1s ease;
     }
+
     ul {
       padding-left: 1.2rem;
     }
+
     a {
       color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -82,92 +98,129 @@
     .carousel-wrapper {
       position: relative;
       overflow: hidden;
-      max-width: 100%;
-      margin-top: 1rem;
     }
+
     .carousel-track {
       display: flex;
-      transition: transform 0.6s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
+
     .carousel-slide {
       min-width: 100%;
       box-sizing: border-box;
       padding: 1rem;
     }
+
     .bubble-card {
-      background: linear-gradient(135deg, #e0f0ff, #c2e1f7);
-      border-radius: 16px;
+      background: #3498db;
+      color: white;
+      border-radius: 15px;
       padding: 1.5rem;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-      font-style: italic;
-      color: #2c3e50;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .bubble-card strong {
-      display: block;
-      margin-top: 1rem;
-      font-style: normal;
-      color: #0b355a;
-    }
+
     .carousel-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #3498db;
+      background: rgba(0, 0, 0, 0.5);
       color: white;
       border: none;
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem;
       cursor: pointer;
       border-radius: 50%;
-      z-index: 2;
-      opacity: 0.8;
     }
+
     .carousel-btn.left { left: 10px; }
     .carousel-btn.right { right: 10px; }
-    .carousel-btn:hover { background-color: #2980b9; }
+
     .carousel-dots {
       text-align: center;
       margin-top: 1rem;
     }
+
     .carousel-dots button {
-      height: 12px;
-      width: 12px;
-      margin: 0 4px;
-      background-color: #bbb;
-      border: none;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
       border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      border: none;
+      background: #ccc;
     }
-    .carousel-dots .active { background-color: #3498db; }
+
+    .carousel-dots .active {
+      background: #3498db;
+    }
   </style>
 </head>
+
 <body>
   <div class="topbar">
     <button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Dark Mode</button>
     <button onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
   </div>
+
   <section class="center">
     <img src="profile.jpg" alt="Profile photo" class="profile">
     <h1>Vabhave Raj Vyas</h1>
-    <p>
-      <i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
+    <p><i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
       <i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a> &nbsp;|&nbsp;
       <i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a>
     </p>
-    <p>
-      <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a>
-    </p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-user"></i> Profile</h2>
+    <p>Detail-oriented engineer with expertise in business intelligence, mainframe systems, and technical analysis...</p>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-briefcase"></i> Experience</h2>
+    <h3>System Analyst II – Innoveo Kft, Budapest (2022–Present)</h3>
+    <ul><li>Led SDLC implementation and business requirement translation</li></ul>
+    <h3>Operations Analyst – Sun Metal Group (2021–2022)</h3>
+    <ul><li>Digitized workflows and supported HR compliance systems</li></ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <h3>MBA, Operations & Finance – Manipal University, Dubai</h3>
+    <h3>BTech, Mechatronics Engineering – Manipal University, Dubai</h3>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-cogs"></i> Skills</h2>
+    <ul><li>SQL, COBOL, Excel, Tableau</li><li>Azure DevOps, Git, TeamCity</li></ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-book"></i> Courses</h2>
+    <ul><li>Marketing Strategy – EIT Digital</li><li>Data Science – IBM</li></ul>
   </section>
 
   <section>
     <h2><i class="fas fa-comment-dots"></i> Recommendations</h2>
     <div class="carousel-wrapper">
       <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-slide"><div class="bubble-card"><p>"Vaibhav's attention to detail and consistency made him a great asset in our delivery team."</p><strong>Deepak Sharma</strong></div></div>
-        <div class="carousel-slide"><div class="bubble-card"><p>"Always proactive and full of positive energy. Pleasure working together!"</p><strong>Anjali Mehta</strong></div></div>
-        <div class="carousel-slide"><div class="bubble-card"><p>"Vaibhav brings structure to chaos and is a great collaborator."</p><strong>Rahul Iyer</strong></div></div>
+        <div class="carousel-slide">
+          <div class="bubble-card">
+            <p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... Highly recommend!"</p>
+            <strong>Shabapathy S B</strong><br>PM @ Innoveo | Ex Deloitte, IBM, Atos
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="bubble-card">
+            <p>"Vaibhav’s enthusiasm and fresh ideas made him an invaluable asset..."</p>
+            <strong>Mohit Kumar Garg</strong><br>Senior Business Analyst @ LTIMindtree
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="bubble-card">
+            <p>"Exceptional problem-solving and detail orientation from Vaibhav..."</p>
+            <strong>Attila Andrássy</strong><br>Business Analyst @ Dorsum
+          </div>
+        </div>
       </div>
       <button class="carousel-btn left" id="prevBtn">&#10094;</button>
       <button class="carousel-btn right" id="nextBtn">&#10095;</button>
@@ -181,61 +234,59 @@
       html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
     }
 
-    const track = document.getElementById("carouselTrack");
-    const slides = document.querySelectorAll(".carousel-slide");
-    const dotsContainer = document.getElementById("carouselDots");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
+
     let currentSlide = 0;
-    let intervalId;
+    let autoSlideInterval;
 
-    function goToSlide(index) {
-      currentSlide = (index + slides.length) % slides.length;
+    function updateCarousel() {
       track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      updateDots();
-    }
-
-    function updateDots() {
-      const dots = dotsContainer.querySelectorAll("button");
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentSlide);
+      [...dotsContainer.children].forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
       });
     }
 
+    function goToSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
     slides.forEach((_, i) => {
-      const dot = document.createElement("button");
-      dot.addEventListener("click", () => goToSlide(i));
+      const dot = document.createElement('button');
+      dot.addEventListener('click', () => goToSlide(i));
       dotsContainer.appendChild(dot);
     });
 
-    prevBtn.addEventListener("click", () => goToSlide(currentSlide - 1));
-    nextBtn.addEventListener("click", () => goToSlide(currentSlide + 1));
-
     function startAutoSlide() {
-      intervalId = setInterval(() => goToSlide(currentSlide + 1), 5000);
+      autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
     }
+
     function stopAutoSlide() {
-      clearInterval(intervalId);
+      clearInterval(autoSlideInterval);
     }
 
-    startAutoSlide();
-    updateDots();
-
-    // Swipe support
     let startX = 0;
-    track.addEventListener("touchstart", (e) => {
+    track.addEventListener('touchstart', e => {
       startX = e.touches[0].clientX;
       stopAutoSlide();
     });
-    track.addEventListener("touchend", (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) goToSlide(currentSlide + 1);
-        else goToSlide(currentSlide - 1);
+    track.addEventListener('touchend', e => {
+      const diffX = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diffX) > 50) {
+        goToSlide(currentSlide - Math.sign(diffX));
       }
       startAutoSlide();
     });
+
+    startAutoSlide();
+    updateCarousel();
   </script>
 </body>
 </html>
