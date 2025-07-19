@@ -1,271 +1,334 @@
 <!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
-<head>
-  <title>Vabhave Raj Vyas - Resume</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<title>Vabhave Raj Vyas - Resume</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Font Awesome for icons -->
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<style>
+			:root {
+				--primary: #3498db;
+				--accent: #2980b9;
+			}
+			[data-theme="dark"] body {
+				background-color: #1e1e1e;
+				color: #f4f4f4;
+			}
+			.topbar {
+				display: flex;
+				justify-content: flex-end;
+				gap: 1rem;
+				margin-bottom: 2rem;
+			}
+			.topbar button {
+				background-color: var(--primary);
+				color: white;
+				border: none;
+				padding: 0.5rem 1rem;
+				font-weight: bold;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			.topbar button:hover {
+				background-color: var(--accent);
+			}
+			.bubble-card {
+				background: #3498db;
+				color: white;
+				border-radius: 15px;
+				padding: 1.5rem;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			}
+			.carousel-wrapper {
+				position: relative;
+				overflow: hidden;
+			}
+			.carousel-track {
+				display: flex;
+				transition: transform 0.5s ease-in-out;
+			}
+			.carousel-slide {
+				min-width: 100%;
+				box-sizing: border-box;
+				padding: 1rem;
+			}
+			.carousel-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: rgba(0, 0, 0, 0.5);
+				color: white;
+				border: none;
+				padding: 0.5rem;
+				cursor: pointer;
+				border-radius: 50%;
+				z-index: 1;
+			}
+			.carousel-btn.left { left: 10px; }
+			.carousel-btn.right { right: 10px; }
+			.carousel-dots {
+				text-align: center;
+				margin-top: 1rem;
+			}
+			.carousel-dots button {
+				width: 10px;
+				height: 10px;
+				margin: 0 5px;
+				border-radius: 50%;
+				border: none;
+				background: #ccc;
+			}
+			.carousel-dots .active {
+				background: #3498db;
+			}
+			.center {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body class="is-preload" data-theme="light">
 
-  <!-- Read Only Styles -->
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Topbar -->
+		<div class="topbar">
+			<button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Dark Mode</button>
+			<button onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
+		</div>
 
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<!-- Header -->
+		<section id="header">
+			<header class="center">
+				<span class="image avatar"><img src="profile.jpg" alt="Profile" /></span>
+				<h1 id="logo"><a href="#">Vabhave Raj Vyas</a></h1>
+				<p>
+					<i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
+					<i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a> &nbsp;|&nbsp;
+					<i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a>
+				</p>
+				<p>
+					<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a>
+				</p>
+			</header>
+			<nav id="nav">
+				<ul>
+					<li><a href="#profile" class="active">Profile</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#courses">Courses</a></li>
+					<li><a href="#recommendations">Recommendations</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/vaibhavrajvyas/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:vaibhavrajvyas17@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+		</section>
 
-  <style>
-    :root {
-      --primary: #3498db;
-      --accent: #2980b9;
-    }
+		<!-- Wrapper -->
+		<div id="wrapper">
 
-    [data-theme="dark"] body {
-      background-color: #1e1e1e;
-      color: #f4f4f4;
-    }
+			<!-- Main -->
+			<div id="main">
 
-    .topbar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
+				<!-- Profile -->
+				<section id="profile">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-user"></i> Profile</h2>
+						</header>
+						<p>Detail-oriented engineer with expertise in business intelligence, mainframe systems, and technical analysis. Proven ability to lead SDLC implementations, digitize workflows, and translate business requirements into technical solutions. Adept at collaborating across teams and delivering actionable insights for business growth.</p>
+					</div>
+				</section>
 
-    .topbar button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+				<!-- Experience -->
+				<section id="experience">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-briefcase"></i> Experience</h2>
+						</header>
+						<h3>System Analyst II – Innoveo Kft, Budapest (2022–Present)</h3>
+						<ul>
+							<li>Led SDLC implementation and business requirement translation</li>
+						</ul>
+						<h3>Operations Analyst – Sun Metal Group (2021–2022)</h3>
+						<ul>
+							<li>Digitized workflows and supported HR compliance systems</li>
+						</ul>
+					</div>
+				</section>
 
-    .topbar button:hover {
-      background-color: var(--accent);
-    }
+				<!-- Education -->
+				<section id="education">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-graduation-cap"></i> Education</h2>
+						</header>
+						<h3>MBA, Operations &amp; Finance – Manipal University, Dubai</h3>
+						<h3>BTech, Mechatronics Engineering – Manipal University, Dubai</h3>
+					</div>
+				</section>
 
-    .bubble-card {
-      background: #3498db;
-      color: white;
-      border-radius: 15px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+				<!-- Skills -->
+				<section id="skills">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-cogs"></i> Skills</h2>
+						</header>
+						<ul>
+							<li>SQL, COBOL, Excel, Tableau</li>
+							<li>Azure DevOps, Git, TeamCity</li>
+						</ul>
+					</div>
+				</section>
 
-    .carousel-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
+				<!-- Courses -->
+				<section id="courses">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-book"></i> Courses</h2>
+						</header>
+						<ul>
+							<li>Marketing Strategy – EIT Digital</li>
+							<li>Data Science – IBM</li>
+						</ul>
+					</div>
+				</section>
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+				<!-- Recommendations (Carousel) -->
+				<section id="recommendations">
+					<div class="container">
+						<header class="major">
+							<h2><i class="fas fa-comment-dots"></i> Recommendations</h2>
+						</header>
+						<div class="carousel-wrapper">
+							<div class="carousel-track" id="carouselTrack">
+								<div class="carousel-slide">
+									<div class="bubble-card">
+										<p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... Highly recommend!"</p>
+										<strong>Shabapathy S B</strong><br>PM @ Innoveo | Ex Deloitte, IBM, Atos
+									</div>
+								</div>
+								<div class="carousel-slide">
+									<div class="bubble-card">
+										<p>"Vaibhav’s enthusiasm and fresh ideas made him an invaluable asset..."</p>
+										<strong>Mohit Kumar Garg</strong><br>Senior Business Analyst @ LTIMindtree
+									</div>
+								</div>
+								<div class="carousel-slide">
+									<div class="bubble-card">
+										<p>"Exceptional problem-solving and detail orientation from Vaibhav..."</p>
+										<strong>Attila Andrássy</strong><br>Business Analyst @ Dorsum
+									</div>
+								</div>
+								<div class="carousel-slide">
+									<div class="bubble-card">
+										<p>"Raj is not only a skilled professional but also a pleasure to work with. His positive attitude, dedication, and collaborative spirit make him an excellent team player..."</p>
+										<strong>Livia Barta</strong><br>Project Lead | Agile
+									</div>
+								</div>
+								<div class="carousel-slide">
+									<div class="bubble-card">
+										<p>"I would recommend him to all employers if they want to work with a System Analyst who never gives up and always ready to learn..."</p>
+										<strong>Richárd Pap</strong><br>IT Business Analyst | Remote | Agile
+									</div>
+								</div>
+							</div>
+							<button class="carousel-btn left" id="prevBtn">&#10094;</button>
+							<button class="carousel-btn right" id="nextBtn">&#10095;</button>
+							<div class="carousel-dots" id="carouselDots"></div>
+						</div>
+					</div>
+				</section>
 
-    .carousel-slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      padding: 1rem;
-    }
+			</div>
 
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 0.5rem;
-      cursor: pointer;
-      border-radius: 50%;
-      z-index: 1;
-    }
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; Vabhave Raj Vyas. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
 
-    .carousel-btn.left { left: 10px; }
-    .carousel-btn.right { right: 10px; }
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Carousel and Dark Mode -->
+		<script>
+			function toggleDarkMode() {
+				const html = document.documentElement;
+				html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+			}
 
-    .carousel-dots {
-      text-align: center;
-      margin-top: 1rem;
-    }
+			const track = document.getElementById('carouselTrack');
+			const slides = document.querySelectorAll('.carousel-slide');
+			const prevBtn = document.getElementById('prevBtn');
+			const nextBtn = document.getElementById('nextBtn');
+			const dotsContainer = document.getElementById('carouselDots');
 
-    .carousel-dots button {
-      width: 10px;
-      height: 10px;
-      margin: 0 5px;
-      border-radius: 50%;
-      border: none;
-      background: #ccc;
-    }
+			let currentSlide = 0;
+			let autoSlideInterval;
 
-    .carousel-dots .active {
-      background: #3498db;
-    }
-  </style>
-</head>
+			function updateCarousel() {
+				track.style.transform = `translateX(-${currentSlide * 100}%)`;
+				[...dotsContainer.children].forEach((dot, i) => {
+					dot.classList.toggle('active', i === currentSlide);
+				});
+			}
 
-<body class="is-preload" data-theme="light">
-  <div class="topbar">
-    <button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Dark Mode</button>
-    <button onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
-  </div>
+			function goToSlide(index) {
+				currentSlide = (index + slides.length) % slides.length;
+				updateCarousel();
+			}
 
-  <!-- Wrapper -->
-  <div id="wrapper">
-    <!-- Main -->
-    <div id="main">
-      <div class="inner">
+			prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+			nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
 
-        <section class="center">
-          <span class="image avatar"><img src="profile.jpg" alt="Profile" /></span>
-          <h1>Vabhave Raj Vyas</h1>
-          <p><i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
-            <i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a> &nbsp;|&nbsp;
-            <i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a>
-          </p>
-          <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a></p>
-        </section>
+			slides.forEach((_, i) => {
+				const dot = document.createElement('button');
+				dot.addEventListener('click', () => goToSlide(i));
+				dotsContainer.appendChild(dot);
+			});
 
-        <section>
-          <h2><i class="fas fa-user"></i> Profile</h2>
-          <p>Detail-oriented engineer with expertise in business intelligence, mainframe systems, and technical analysis...</p>
-        </section>
+			function startAutoSlide() {
+				autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+			}
 
-        <section>
-          <h2><i class="fas fa-briefcase"></i> Experience</h2>
-          <h3>System Analyst II – Innoveo Kft, Budapest (2022–Present)</h3>
-          <ul><li>Led SDLC implementation and business requirement translation</li></ul>
-          <h3>Operations Analyst – Sun Metal Group (2021–2022)</h3>
-          <ul><li>Digitized workflows and supported HR compliance systems</li></ul>
-        </section>
+			function stopAutoSlide() {
+				clearInterval(autoSlideInterval);
+			}
 
-        <section>
-          <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-          <h3>MBA, Operations & Finance – Manipal University, Dubai</h3>
-          <h3>BTech, Mechatronics Engineering – Manipal University, Dubai</h3>
-        </section>
+			let startX = 0;
+			track.addEventListener('touchstart', e => {
+				startX = e.touches[0].clientX;
+				stopAutoSlide();
+			});
+			track.addEventListener('touchend', e => {
+				const diffX = e.changedTouches[0].clientX - startX;
+				if (Math.abs(diffX) > 50) {
+					goToSlide(currentSlide - Math.sign(diffX));
+				}
+				startAutoSlide();
+			});
 
-        <section>
-          <h2><i class="fas fa-cogs"></i> Skills</h2>
-          <ul><li>SQL, COBOL, Excel, Tableau</li><li>Azure DevOps, Git, TeamCity</li></ul>
-        </section>
-
-        <section>
-          <h2><i class="fas fa-book"></i> Courses</h2>
-          <ul><li>Marketing Strategy – EIT Digital</li><li>Data Science – IBM</li></ul>
-        </section>
-
-        <section>
-          <h2><i class="fas fa-comment-dots"></i> Recommendations</h2>
-          <div class="carousel-wrapper">
-            <div class="carousel-track" id="carouselTrack">
-              <div class="carousel-slide">
-                <div class="bubble-card">
-                  <p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... Highly recommend!"</p>
-                  <strong>Shabapathy S B</strong><br>PM @ Innoveo | Ex Deloitte, IBM, Atos
-                </div>
-              </div>
-              <div class="carousel-slide">
-                <div class="bubble-card">
-                  <p>"Vaibhav’s enthusiasm and fresh ideas made him an invaluable asset..."</p>
-                  <strong>Mohit Kumar Garg</strong><br>Senior Business Analyst @ LTIMindtree
-                </div>
-              </div>
-              <div class="carousel-slide">
-                <div class="bubble-card">
-                  <p>"Exceptional problem-solving and detail orientation from Vaibhav..."</p>
-                  <strong>Attila Andrássy</strong><br>Business Analyst @ Dorsum
-                </div>
-              </div>
-              <div class="carousel-slide">
-                <div class="bubble-card">
-                  <p>"Raj is not only a skilled professional but also a pleasure to work with. His positive attitude, dedication, and collaborative spirit make him an excellent team player..."</p>
-                  <strong>Livia Barta</strong><br>Project Lead | Agile
-                </div>
-              </div>
-              <div class="carousel-slide">
-                <div class="bubble-card">
-                  <p>"I would recommend him to all employers if they want to work with a System Analyst who never gives up and always ready to learn..."</p>
-                  <strong>Richárd Pap</strong><br>IT Business Analyst | Remote | Agile
-                </div>
-              </div>
-            </div>
-            <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-            <button class="carousel-btn right" id="nextBtn">&#10095;</button>
-            <div class="carousel-dots" id="carouselDots"></div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
-  <!-- Carousel and Dark Mode -->
-  <script>
-    function toggleDarkMode() {
-      const html = document.documentElement;
-      html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
-    }
-
-    const track = document.getElementById('carouselTrack');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsContainer = document.getElementById('carouselDots');
-
-    let currentSlide = 0;
-    let autoSlideInterval;
-
-    function updateCarousel() {
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      [...dotsContainer.children].forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlide);
-      });
-    }
-
-    function goToSlide(index) {
-      currentSlide = (index + slides.length) % slides.length;
-      updateCarousel();
-    }
-
-    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
-
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.addEventListener('click', () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    });
-
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
-    }
-
-    function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
-    }
-
-    let startX = 0;
-    track.addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
-      stopAutoSlide();
-    });
-    track.addEventListener('touchend', e => {
-      const diffX = e.changedTouches[0].clientX - startX;
-      if (Math.abs(diffX) > 50) {
-        goToSlide(currentSlide - Math.sign(diffX));
-      }
-      startAutoSlide();
-    });
-
-    startAutoSlide();
-    updateCarousel();
-  </script>
-</body>
+			startAutoSlide();
+			updateCarousel();
+		</script>
+	</body>
 </html>
