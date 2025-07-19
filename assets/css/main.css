@@ -3314,3 +3314,21 @@ input, select, textarea {
 			}
 
 	}
+@media screen and (max-width: 736px) {
+  .row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  .row > * {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    margin-left: 0 !important;
+  }
+  [class*="col-"][class*="-small"], [class*="off-"][class*="-small"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
