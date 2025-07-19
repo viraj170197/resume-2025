@@ -1,176 +1,271 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <title>Vabhave Raj Vyas - Resume</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vabhave Raj Vyas – Resume</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body class="is-preload">
 
-  <!-- Sidebar Menu -->
-  <section id="sidebar">
-    <div class="inner">
-      <nav id="menu">
-        <ul>
-          <li><a href="#intro">Intro</a></li>
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#recommendations" class="active">Recommendations</a></li>
-        </ul>
-      </nav>
-    </div>
-  </section>
+  <!-- Read Only Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #3498db;
+      --accent: #2980b9;
+    }
+
+    [data-theme="dark"] body {
+      background-color: #1e1e1e;
+      color: #f4f4f4;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .topbar button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .topbar button:hover {
+      background-color: var(--accent);
+    }
+
+    .bubble-card {
+      background: #3498db;
+      color: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .carousel-btn.left { left: 10px; }
+    .carousel-btn.right { right: 10px; }
+
+    .carousel-dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .carousel-dots button {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: none;
+      background: #ccc;
+    }
+
+    .carousel-dots .active {
+      background: #3498db;
+    }
+  </style>
+</head>
+
+<body class="is-preload" data-theme="light">
+  <div class="topbar">
+    <button onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Toggle Dark Mode</button>
+    <button onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
+  </div>
 
   <!-- Wrapper -->
   <div id="wrapper">
-
-    <!-- Intro Section -->
-    <section id="intro" class="wrapper style1 fullscreen">
+    <!-- Main -->
+    <div id="main">
       <div class="inner">
-        <img src="profile.jpg" alt="Profile photo" class="profile" />
-        <h1>Vabhave Raj Vyas</h1>
-        <p>
-          <i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
-          <i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a> &nbsp;|&nbsp;
-          <i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a><br>
-          <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a>
-        </p>
-      </div>
-    </section>
 
-    <!-- Profile -->
-    <section id="profile" class="wrapper">
-      <div class="inner">
-        <h2>Profile</h2>
-        <p>Detail-oriented engineer with expertise in business intelligence, mainframe systems, and technical analysis...</p>
-      </div>
-    </section>
+        <section class="center">
+          <span class="image avatar"><img src="profile.jpg" alt="Profile" /></span>
+          <h1>Vabhave Raj Vyas</h1>
+          <p><i class="fas fa-map-marker-alt"></i> Budapest, Hungary &nbsp;|&nbsp;
+            <i class="fas fa-phone"></i> <a href="tel:+36706746139">+36 70 674 6139</a> &nbsp;|&nbsp;
+            <i class="fas fa-envelope"></i> <a href="mailto:vaibhavrajvyas17@gmail.com">vaibhavrajvyas17@gmail.com</a>
+          </p>
+          <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vaibhavrajvyas/" target="_blank">LinkedIn Profile</a></p>
+        </section>
 
-    <!-- Experience -->
-    <section id="experience" class="wrapper">
-      <div class="inner">
-        <h2>Experience</h2>
-        <h3>System Analyst II – Innoveo Kft, Budapest (2022–Present)</h3>
-        <ul><li>Led SDLC implementation and requirement translation</li></ul>
-        <h3>Operations Analyst – Sun Metal Group (2021–2022)</h3>
-        <ul><li>Digitized workflows and supported HR compliance systems</li></ul>
-      </div>
-    </section>
+        <section>
+          <h2><i class="fas fa-user"></i> Profile</h2>
+          <p>Detail-oriented engineer with expertise in business intelligence, mainframe systems, and technical analysis...</p>
+        </section>
 
-    <!-- Education -->
-    <section id="education" class="wrapper style2">
-      <div class="inner">
-        <h2>Education</h2>
-        <h3>MBA, Operations & Finance – Manipal University, Dubai</h3>
-        <h3>BTech, Mechatronics Engineering – Manipal University, Dubai</h3>
-      </div>
-    </section>
+        <section>
+          <h2><i class="fas fa-briefcase"></i> Experience</h2>
+          <h3>System Analyst II – Innoveo Kft, Budapest (2022–Present)</h3>
+          <ul><li>Led SDLC implementation and business requirement translation</li></ul>
+          <h3>Operations Analyst – Sun Metal Group (2021–2022)</h3>
+          <ul><li>Digitized workflows and supported HR compliance systems</li></ul>
+        </section>
 
-    <!-- Skills -->
-    <section id="skills" class="wrapper">
-      <div class="inner">
-        <h2>Skills</h2>
-        <ul><li>SQL, COBOL, Excel, Tableau</li><li>Azure DevOps, Git, TeamCity</li></ul>
-      </div>
-    </section>
+        <section>
+          <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+          <h3>MBA, Operations & Finance – Manipal University, Dubai</h3>
+          <h3>BTech, Mechatronics Engineering – Manipal University, Dubai</h3>
+        </section>
 
-    <!-- Recommendations (Carousel) -->
-    <section id="recommendations" class="wrapper style2 special">
-      <div class="inner">
-        <h2>Recommendations</h2>
-        <div class="carousel-wrapper">
-          <div class="carousel-track" id="carouselTrack">
-            <div class="carousel-slide">
-              <div class="bubble-card">
-                <p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... Highly recommend!"</p>
-                <strong>Shabapathy S B</strong><br>PM @ Innoveo | Ex Deloitte, IBM, Atos
+        <section>
+          <h2><i class="fas fa-cogs"></i> Skills</h2>
+          <ul><li>SQL, COBOL, Excel, Tableau</li><li>Azure DevOps, Git, TeamCity</li></ul>
+        </section>
+
+        <section>
+          <h2><i class="fas fa-book"></i> Courses</h2>
+          <ul><li>Marketing Strategy – EIT Digital</li><li>Data Science – IBM</li></ul>
+        </section>
+
+        <section>
+          <h2><i class="fas fa-comment-dots"></i> Recommendations</h2>
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+              <div class="carousel-slide">
+                <div class="bubble-card">
+                  <p>"I had the pleasure of working with Vaibhave, and I truly appreciate his proactiveness... Highly recommend!"</p>
+                  <strong>Shabapathy S B</strong><br>PM @ Innoveo | Ex Deloitte, IBM, Atos
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="bubble-card">
+                  <p>"Vaibhav’s enthusiasm and fresh ideas made him an invaluable asset..."</p>
+                  <strong>Mohit Kumar Garg</strong><br>Senior Business Analyst @ LTIMindtree
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="bubble-card">
+                  <p>"Exceptional problem-solving and detail orientation from Vaibhav..."</p>
+                  <strong>Attila Andrássy</strong><br>Business Analyst @ Dorsum
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="bubble-card">
+                  <p>"Raj is not only a skilled professional but also a pleasure to work with. His positive attitude, dedication, and collaborative spirit make him an excellent team player..."</p>
+                  <strong>Livia Barta</strong><br>Project Lead | Agile
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="bubble-card">
+                  <p>"I would recommend him to all employers if they want to work with a System Analyst who never gives up and always ready to learn..."</p>
+                  <strong>Richárd Pap</strong><br>IT Business Analyst | Remote | Agile
+                </div>
               </div>
             </div>
-            <div class="carousel-slide">
-              <div class="bubble-card">
-                <p>"Vaibhav’s enthusiasm and fresh ideas made him an invaluable asset..."</p>
-                <strong>Mohit Kumar Garg</strong><br>Senior Business Analyst @ LTIMindtree
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="bubble-card">
-                <p>"Exceptional problem-solving and detail orientation from Vaibhav..."</p>
-                <strong>Attila Andrássy</strong><br>Business Analyst @ Dorsum
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="bubble-card">
-                <p>"Raj is a pleasure to work with. His collaborative spirit makes him an excellent team player..."</p>
-                <strong>Lívia Barta, PMP</strong><br>Project Lead, Innoveo
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="bubble-card">
-                <p>"Reliable, determined, and always ready to learn—an asset for any System Analyst role."</p>
-                <strong>Richárd Pap</strong><br>IT Business Analyst @ Hamilton Insurance
-              </div>
-            </div>
+            <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+            <div class="carousel-dots" id="carouselDots"></div>
           </div>
-          <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-          <button class="carousel-btn right" id="nextBtn">&#10095;</button>
-          <div class="carousel-dots" id="carouselDots"></div>
-        </div>
+        </section>
       </div>
-    </section>
-
+    </div>
   </div>
 
+  <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Carousel Logic -->
+  <!-- Carousel and Dark Mode -->
   <script>
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+    }
+
     const track = document.getElementById('carouselTrack');
     const slides = document.querySelectorAll('.carousel-slide');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const dotsContainer = document.getElementById('carouselDots');
-    let current = 0, interval;
 
-    function update() {
-      track.style.transform = `translateX(-${current * 100}%)`;
-      Array.from(dotsContainer.children).forEach((d,i) => d.classList.toggle('active', i === current));
+    let currentSlide = 0;
+    let autoSlideInterval;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      [...dotsContainer.children].forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
     }
 
-    function go(i) {
-      current = (i + slides.length) % slides.length;
-      update();
+    function goToSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      updateCarousel();
     }
 
-    prevBtn.onclick = () => go(current - 1);
-    nextBtn.onclick = () => go(current + 1);
+    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
 
-    slides.forEach((_,i) => {
-      const btn = document.createElement('button');
-      btn.onclick = () => go(i);
-      dotsContainer.appendChild(btn);
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
     });
 
-    document.querySelector('.carousel-wrapper').addEventListener('mouseenter', () => clearInterval(interval));
-    document.querySelector('.carousel-wrapper').addEventListener('mouseleave', () => start());
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+    }
 
-    function start() { interval = setInterval(() => go(current + 1), 5000); }
-    track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; clearInterval(interval); });
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    let startX = 0;
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      stopAutoSlide();
+    });
     track.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 50) go(current - Math.sign(dx));
-      start();
+      const diffX = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diffX) > 50) {
+        goToSlide(currentSlide - Math.sign(diffX));
+      }
+      startAutoSlide();
     });
 
-    start();
-    update();
+    startAutoSlide();
+    updateCarousel();
   </script>
-
 </body>
 </html>
