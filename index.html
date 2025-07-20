@@ -13,12 +13,12 @@
 		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 		<style>
 			:root {
-				--primary: #222831; /* dark grey */
-				--accent: #393E46;
+				--primary: #4acaa8; /* reverted back to green */
+				--accent: #2b9578;
 			}
 			body, html {
 				background: var(--primary) !important;
-				color: #fff !important;
+				color: #333 !important;
 			}
 			[data-theme="dark"] body {
 				background-color: #1e1e1e;
@@ -52,7 +52,7 @@
 				margin-right: 0.5em;
 			}
 			.bubble-card {
-  				background: var(--accent); /* dark grey accent */
+  				background: var(--primary);
   				color: white !important;
   				border-radius: 15px;
   				padding: 1.5rem;
@@ -99,13 +99,13 @@
 				background: #ccc;
 			}
 			.carousel-dots .active {
-				background: #fff;
+				background: #3498db;
 			}
 			.center {
 				text-align: center;
 				color: white !important;
 			}
-			h1, h2, h3, h4, h5, h6, p, a, li, span, strong, .major {
+			h1, h2, h3, h4, h5, h6, .major {
 				color: white !important;
 			}
 			nav#nav ul li a {
@@ -131,7 +131,7 @@
 				height: 160px;
 				border-radius: 50%;
 				object-fit: cover;
-				box-shadow: 0 6px 18px rgba(34,40,49,0.18);
+				box-shadow: 0 6px 18px rgba(76,202,168,0.18);
 			}
 			@media screen and (max-width: 600px) {
 				.image.right-card {
